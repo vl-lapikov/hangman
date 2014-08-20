@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Word
  *
- * @ORM\Table()
+ * @ORM\Table(name="word")
  * @ORM\Entity(repositoryClass="Lapikov\HangmanBundle\Entity\WordRepository")
  *
  */

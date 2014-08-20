@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation\Exclude;
 /**
  * Game
  *
- * @ORM\Table()
+ * @ORM\Table(name="game")
  * @ORM\Entity(repositoryClass="Lapikov\HangmanBundle\Entity\GameRepository")
  */
 class Game

@@ -1,0 +1,18 @@
+lapikov_hangman_game:
+    resource: "Lapikov\HangmanBundle\Controller\GameController"
+    type: rest
+
+lapikov_hangman_remove_trailing_slash:
+    path: /{url}
+    defaults: { _controller: LapikovHangmanBundle:Default:removeTrailingSlash }
+    requirements:
+        url: .*/$
+    methods: [GET]
+
+lapikov_hangman_welcome:
+    path: /
+    defaults: { _controller: LapikovHangmanBundle:Default:welcome }
+
+lapikov_hangman_default:
+    path: /{url}
+    defaults: { _controller: LapikovHangmanBundle:Default:welcome }

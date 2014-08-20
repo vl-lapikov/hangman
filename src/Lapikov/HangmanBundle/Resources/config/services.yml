@@ -1,0 +1,27 @@
+parameters:
+    lapikov_hangman.word.repository.class: Lapikov\HangmanBundle\Entity\WordRepository
+    lapikov_hangman.word.entity.class: Lapikov\HangmanBundle\Entity\Word
+
+    lapikov_hangman.game.repository.class: Lapikov\HangmanBundle\Entity\GameRepository
+    lapikov_hangman.game.entity.class: Lapikov\HangmanBundle\Entity\Game
+
+    lapikov_hangman.game.service.class: Lapikov\HangmanBundle\Service\GameService
+
+services:
+    lapikov_hangman.word.repository:
+        class: %lapikov_hangman.word.repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments:
+                - %lapikov_hangman.word.entity.class%
+
+    lapikov_hangman.game.repository:
+        class: %lapikov_hangman.game.repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments:
+                - %lapikov_hangman.game.entity.class%
+
+    lapikov_hangman.game.service:
+        class: "%lapikov_hangman.game.service.class%"
+        arguments: ["@lapikov_hangman.game.repository", "@lapikov_hangman.word.repository"]

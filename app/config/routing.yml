@@ -1,0 +1,4 @@
+lapikov_hangman:
+    type: rest
+    prefix: /
+    resource: "@LapikovHangmanBundle/Resources/config/routes.yml"

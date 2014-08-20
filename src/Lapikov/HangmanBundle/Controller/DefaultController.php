@@ -20,7 +20,7 @@ class DefaultController extends Controller
      */
     public function welcomeAction(Request $request)
     {
-        return new Response($this->container->get('jms_serializer')->serialize(array('message' => 'Welcome to Hangman! Please use API calls'), 'json'));
+        return new Response($this->container->get('jms_serializer')->serialize(array('message' => 'Welcome to Hangman! Use /games API'), 'json'));
     }
 
     /**

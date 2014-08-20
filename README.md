@@ -7,6 +7,7 @@ Update composer:
 composer update 
 ```
 Define correct app/config/parameters.yml using app/config/parameters.yml.dist as an example.
+
 Create database schema:
 ``` 
 php app/console doctrine:database:create 
